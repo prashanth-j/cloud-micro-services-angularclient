@@ -1,0 +1,51 @@
+<!-- Add Beneficiary Page -->
+
+<div class="container">
+	<!-- Content here -->
+	<h3>Add Beneficiary</h3>
+	<br /> <br />
+	
+	<div *ngIf="found" class="alert alert-danger">
+  		<strong>Failed!</strong> to add Beneficiary.
+	</div>
+	<br/>
+	
+	<form>
+		<div class="form-group">
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm-4">
+						<label for="inputUserName">Beneficiary Name</label>
+					</div>
+					<div class="col-sm-4">
+						<input type="text" class="form-control" id="name" [(ngModel)]="model.name" name="name" #name="ngModel" 
+							aria-describedby="name" placeholder="Enter Beneficiary Name">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputUserName">Account Number</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="accountNumber" [(ngModel)]="model.accountNumber" name="accountNumber" #name="ngModel" 
+						aria-describedby="accountNumber" placeholder="Enter AccountNumber">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputUserName">IFSC Code</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="ifscCode" [(ngModel)]="model.ifscCode" name="ifscCode" #name="ngModel" 
+						aria-describedby="ifscCode" placeholder="Enter IFSC Code">
+				</div>
+			</div>
+		</div>
+		<button (click) ="submitBene()" type="submit" class="btn btn-primary">Submit</button>
+		<button (click) ="closeBene()" type="submit" class="btn btn-primary">Close</button>
+	</form>
+</div>

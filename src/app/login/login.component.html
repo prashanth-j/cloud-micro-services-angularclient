@@ -1,0 +1,59 @@
+<div class="container">
+	<!-- Content here -->
+
+	<form>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputUserName">User Name</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="name"
+						required   [(ngModel)]="model.userName" name="name"
+						#name="ngModel" placeholder="User name">
+				</div>
+
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputPassword">Password</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="password" class="form-control" id="userPassword"
+						[(ngModel)]="model.password" name="password" #name="ngModel"
+						placeholder="Password">
+				</div>
+			</div>
+		</div>
+<!-- 		<div class="form-check">
+			<div class="row">
+				<div class="col-sm-4">
+					<input type="checkbox" class="form-check-input" id="check">
+					<label class="form-check-label" for="exampleCheck1">Check
+						me out</label>
+				</div>
+			</div>
+		</div> -->
+		<br />
+		<button (click)="loginSubmit()" [disabled]="dataAvailable()"
+			type="submit" class="btn btn-primary">Submit</button>
+        <br/><br/>
+     	<div *ngIf="!found" class="alert alert-danger">Username or password is incorrect</div>
+	
+	</form>
+	<form>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4">
+					<ul>
+						<li><a routerLink="/createCustomer">Create Account</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-1"></div>
+		<ul class="nav justify-content-center">
+			<li class="nav-item"><button type="submit" class="btn btn-link btn-logout" (click) = "routeToHome()">Home</button></li>
+		</ul>
+	</div>
+
+	<h3>Payment Transaction</h3>
+	<div class="row">
+
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+				
+					<th scope="col">#</th>
+					<th scope="col">Debit or Credit</th>
+					<th scope="col">Amount</th>
+					<th scope="col">Transaction Ref</th>
+					<th scope="col">Date of Transaction</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let payment of paymentList">
+					<th scope="row">1</th>
+					<td>{{payment.debitOrCredit}}</td>
+					<td>{{payment.amount}}</td>
+					<td>{{payment.transactionRef}}</td>
+					<td>{{payment.dateOfTransaction}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</div>

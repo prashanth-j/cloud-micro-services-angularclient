@@ -1,0 +1,101 @@
+<!-- Account Creation Page -->
+<div class="container">
+	<!-- Content here -->
+	<h3>Create Customer</h3>
+	<br/>
+		<form>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputUserName">Enter User Name</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="userName"  [(ngModel)]="model.userName" name="userName"	#name="ngModel"
+						aria-describedby="emailHelp" placeholder="Enter User Name">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputUserName">Enter Password</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="password" class="form-control" id="password"  [(ngModel)]="model.password" name="password"	#name="ngModel"
+						aria-describedby="emailHelp" placeholder="Enter password">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputUserName">Enter First Name</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="firstName"  [(ngModel)]="model.firstName" name="name"	#name="ngModel"
+						aria-describedby="emailHelp" placeholder="Enter First Name">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputUserName">Enter Last Name</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="lastName"  [(ngModel)]="model.lastName" name="lastName"	#name="ngModel"
+						aria-describedby="ifscCodeHelp" placeholder="Enter Last Name">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputUserName">Enter Email</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="email" class="form-control" id="emailId"  [(ngModel)]="model.emailId" name="emailId"	#name="ngModel"
+						aria-describedby="email" placeholder="Enter Email"> 
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputUserName">Enter Phone Number</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="number" class="form-control" id="phoneNo"  [(ngModel)]="model.phoneNo" name="phoneNo"	#name="ngModel"
+						aria-describedby="email" placeholder="Enter Phone Number"> 
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputUserName">Enter Address Line 1</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="email" class="form-control" id="address1"  [(ngModel)]="model.address1" name="address1" #name="ngModel"
+						aria-describedby="email" placeholder="Enter Address Line1"> 
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputUserName">Enter Address Line 2</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="email" class="form-control" id="address2" [(ngModel)]="model.address2" name="address2" #name="ngModel"
+						aria-describedby="email" placeholder="Enter Address Line2">
+				</div>
+			</div>
+		</div>
+		<br/>
+		<button (click) ="createCustomerPage()" type="submit" class="btn btn-primary">Next</button>
+		<button (click) ="closeCreatePage()" type="submit" class="btn btn-primary">Close</button>
+		</form>
+	</div>
+	

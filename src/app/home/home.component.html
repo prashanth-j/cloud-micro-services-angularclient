@@ -1,0 +1,54 @@
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6"></div>
+		<div class="col-sm-6">
+			<ul class="nav justify-content-center">
+				<li class="nav-item">
+					<button type="submit" class="btn btn-link btn-logout" (click) = "routeTologin()">Logout</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th scope="col">Customer Name</th>
+					<th scope="col">Account Number</th>
+					<th scope="col">Balance </th>
+					<th scope="col">Logged In-Time</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{model.firstName}}</td>
+					<td>{{ngmodel.accountNumber}}</td>
+					<td>{{ngmodel.balance}}</td>
+					<td>{{currentTimestamp}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="row">
+		
+			<div class="col-sm-3">
+				<button type="button" class="btn btn-info"
+					(click) ="routefundTransfer()">Transfer Fund</button>
+			</div>
+			<div class="col-sm-3">
+				<button type="button" class="btn btn-info"
+					(click) ="routepaymentTransaction()">View Payments</button>
+
+			</div>
+			<div class="col-sm-3">
+				<button type="button" class="btn btn-info"
+					(click) ="routeToaddBene()">Add Beneficiary</button>
+			</div>
+			<div class="col-sm-3">
+				<button type="button" class="btn btn-info"
+					(click) ="routeToviewBene()">View Beneficiaries</button>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,48 @@
+<!-- Account Creation Page -->
+<div class="container">
+	<!-- Content here -->
+
+	<form>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputUserName">Enter IFSC Code</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="ifscCode"
+						[(ngModel)]="model.ifscCode" name="ifscCode" #name="ngModel"
+						aria-describedby="ifscCodeHelp" placeholder="Enter IFSC Code">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputUserName">Enter Min Balance</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="balance"
+						[(ngModel)]="model.balance" name="balance" #name="ngModel"
+						aria-describedby="balance" placeholder="Enter Email">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputUserName">Account Type</label>
+				</div>
+				<div class="col-sm-4">
+					<select class="form-control" id="type" [(ngModel)]="model.type" name="type" #name="ngModel">
+						<option>Savings</option>
+						<option>Current</option>
+					</select> 
+				</div>
+			</div>
+		</div>
+		<button (click) ="createAccountPage()" type="submit"
+			class="btn btn-primary">Submit</button>
+		<button (click) ="closeAccountPage()" type="submit"
+			class="btn btn-primary">Close</button>
+	</form>
+</div>

@@ -1,0 +1,61 @@
+<!-- Fund Transfer Page -->
+<div class="container">
+	<!-- Content here -->
+	<h3>Fund Transfer</h3>
+	<br/><br/>
+	
+	 <div *ngIf="!found" class="alert alert-danger">
+  		<strong>Failed!</strong> Transfer Fund Failed.
+	</div>
+	<br/>
+	
+	<form>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputUserName">From Account</label>
+				</div>
+				<div class="col-sm-4">
+					{{model.fromAccount}}
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputPassword">To Account</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="toAccount"  [(ngModel)]="model.toAccount" name="toAccount"	#name="ngModel" 
+						placeholder="Account Number">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputPassword">IFSC Code</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="crifscCode"  [(ngModel)]="model.crifscCode" name="crifscCode" #name="ngModel" 
+						placeholder="IFSC Code">
+				</div>
+			</div>
+		</div>
+		
+			<div class="form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<label for="inputPassword">Amount</label>
+				</div>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="amount"  [(ngModel)]="model.amount" name="amount"	#name="ngModel" 
+						placeholder="Amount">
+				</div>
+			</div>
+		</div>
+		<button (click) = "submitFund()" type="submit" class="btn btn-primary">Submit</button>
+		<button (click) = "cancelFund()" type="submit" class="btn btn-primary">Cancel</button>
+	</form>
+	
+</div>
